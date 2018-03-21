@@ -7,6 +7,12 @@ function component() {
     // Lodash, now imported by this script
     element.innerHTML = lodash.join(['Hello', 'webpack'], ' ');
 
+    var button = document.createElement('div');
+    button.innerHTML = "  <button class=\"foo-button mdc-button\">\n" +
+    "    Button\n" +
+    "  </button>";
+
+    element.appendChild(button);
     return element;
 }
 
