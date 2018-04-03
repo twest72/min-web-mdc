@@ -17,18 +17,14 @@ module.exports = {
         new CleanWebpackPlugin(['dist']),
         // generate index html from template
         new HtmlWebpackPlugin({
-            title: 'Webpack Starter',
+            title: 'Webpack Starter with Material and Handlebars',
             template: 'src/index.html'
         }),
         // includes stylesheet
         new HtmlWebpackIncludeAssetsPlugin({
             assets: ['index.css'],
             append: false
-        }),
-        // copies handlebars templates
-        new CopyWebpackPlugin([
-            {from: 'src/templates', to: 'templates/', toType: 'dir'}
-        ])
+        })
     ],
     output: {
         filename: '[name].bundle.js',
