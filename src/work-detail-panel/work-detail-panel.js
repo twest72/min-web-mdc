@@ -4,18 +4,16 @@ import workDetailPanel from './work-detail-panel.hbs';
 
 export class WorkDetailPanel {
 
-    constructor() {
-        this.titleElement;
-        this.artistElement;
-        this.addWorkButton;
+    constructor(rootElement) {
+        this.rootElement = rootElement;
         this.render()
     }
 
     render() {
-        document.getElementById('work-detail-panel').innerHTML = workDetailPanel();
-        this.titleElement = document.getElementById('title');
-        this.artistElement = document.getElementById('artist');
-        this.addWorkButton = document.getElementById('addWork');
+        this.rootElement.innerHTML = workDetailPanel();
+        this.titleElement = this.rootElement.querySelector('input.title');
+        this.artistElement = this.rootElement.querySelector('input.artist');
+        this.addWorkButton = this.rootElement.querySelector('button.add-work');
 
         MdcHelper.initAll();
     }

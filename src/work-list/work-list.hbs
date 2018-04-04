@@ -2,10 +2,9 @@
     {{#each works}}
         <li class="mdc-list-item checkbox-list-ripple-surface">
             <span class="mdc-list-item__graphic">
-                <div class="mdc-checkbox">
+                <div class="mdc-checkbox" workId="{{id}}">
                     <input type="checkbox"
-                           class="mdc-checkbox__native-control"
-                           id="leading-checkbox-work"/>
+                           class="mdc-checkbox__native-control"/>
                     <div class="mdc-checkbox__background">
                       <svg class="mdc-checkbox__checkmark"
                            viewBox="0 0 24 24">
@@ -22,3 +21,6 @@
         </li>
     {{/each}}
 </ul>
+<button class="mdc-button remove-work">
+    Remove
+</button>
