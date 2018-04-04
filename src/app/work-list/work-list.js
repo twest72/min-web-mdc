@@ -16,7 +16,7 @@ export class WorkList {
 
     render() {
         this.rootElement.innerHTML = workList(this.data);
-        const removeWorkButton = this.rootElement.querySelector('#work-list button.remove-work');
+        const removeWorkButton = this.rootElement.querySelector('button.remove-work');
         const thiz = this;
         removeWorkButton.onclick = function (event) {
             thiz.getSelectedWorkIds().forEach(workId =>
